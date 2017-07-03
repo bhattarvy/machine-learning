@@ -4,7 +4,13 @@ function plotData(x, y)
 %   population and profit.
 
 figure; % open a new figure window
+data=load('ex1data1.txt');
+x=data(:,1);y=data(:,2);
+thetao=-3.6;theta1=1.6;
 
+
+
+hold on;
 % ====================== YOUR CODE HERE ======================
 % Instructions: Plot the training data into a figure using the 
 %               "figure" and "plot" commands. Set the axes labels using
@@ -16,11 +22,11 @@ figure; % open a new figure window
 %       appear as red crosses. Furthermore, you can make the
 %       markers larger by using plot(..., 'rx', 'MarkerSize', 10);
 
-plot(x,y);
+plot(x,y,'rx','MarkerSize',10);
 xlabel('population');
 ylabel('revenue');
-
-
+y=thetao + theta1*x;
+plot(y,x);
 
 
 
