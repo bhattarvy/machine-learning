@@ -65,6 +65,7 @@ for i = 1:m
     % using theta calculated from training set
 error_val(i) = linearRegCostFunction(Xval, yval, theta, 0);
 
+end
 
 
 

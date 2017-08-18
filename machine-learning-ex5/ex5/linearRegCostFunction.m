@@ -13,10 +13,10 @@ m = length(y);
 J = 0;
 h=X*theta;
 
-s=sum((h-y).^2) + sum(theta(2).^2);
+J=sum((h-y).^2) + sum(theta(2).^2);
 
-s=s/24;
-J=s;
+J=J/24;
+
 
 grad = zeros(size(theta));
 grad(1)=sum(h-y);
