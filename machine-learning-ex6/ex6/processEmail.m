@@ -90,6 +90,12 @@ while ~isempty(email_contents)
     %               'action', then, you should add 18 to the word_indices 
     %               vector (e.g., word_indices = [word_indices ; 18]; ).
     % 
+    for i=1:length(vocabList)
+      
+      if strcmp(str,vocabList(i))
+        word_indices=[word_indices;i];
+      end
+    end
     % Note: vocabList{idx} returns a the word with index idx in the
     %       vocabulary list.
     % 
